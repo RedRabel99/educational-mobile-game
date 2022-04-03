@@ -11,6 +11,7 @@ public class MonsterBehavior : MonoBehaviour
     private Vector3 cursorPosition;
     public TMP_Text scoreValue;
     private int _score;
+    public GameController gameController;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +30,18 @@ public class MonsterBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        bool var = collision.gameObject.GetComponent<FallingObject.FallingObject>().IsCorrect(0);
         Debug.Log(collision.name);
         Destroy(collision.gameObject);
-        UpdateScore();
+        if (var)
+        {
+            UpdateScore();
+        }
+        else
+        {
+            gameController.IncreaseMistakeValue();
+        }
+        
     }
 
     private void UpdateScore()

@@ -6,15 +6,22 @@ using FallingObject;
 public class GameController : MonoBehaviour
 {
     [SerializeField] FallingObject.FallingObject ObjectToSpawn;
-    public const float LEFT_SIDE_X = -4.0f;
-    public const float RIGHT_SIDE_X = 4.0f;
+    public const float LEFT_SIDE_X = -3.7f;
+    public const float RIGHT_SIDE_X = 3.7f;
     public const float SPAWN_HEIGHT = 10.0f;
     public double timeBeetwinSpawns;
     public double lastSpawnTime;
+    public short mistakeCounter;
+
+    public SpriteRenderer leftCross;
+    public SpriteRenderer rightCross;
+    public SpriteRenderer midCross;
     void Start()
     {
         timeBeetwinSpawns = 2.0;
         lastSpawnTime = Time.time;
+        mistakeCounter = 0;
+        CrossInit();
     }
 
     // Update is called once per frame
@@ -33,5 +40,34 @@ public class GameController : MonoBehaviour
             Instantiate(ObjectToSpawn, spawningPosition, transform.rotation);
         }
         
+    }
+
+    public void IncreaseMistakeValue()
+    {
+        mistakeCounter++;
+        if (mistakeCounter == 1)
+        {
+            leftCross.color = new Color(1f, 1f, 1f, 1f);
+        }
+        if (mistakeCounter == 2)
+        {
+            midCross.color = new Color(1f, 1f, 1f, 1f);
+        }
+        if (mistakeCounter == 3)
+        {
+            rightCross.color = new Color(1f, 1f, 1f, 1f);
+        }
+    }
+
+    void CrossInit()
+    {
+        Debug.Log("XD?????");
+        Color color = new Color(50f/255f, 45f/255f, 45f/255f, 255f/255f);
+        Debug.Log(color);
+        leftCross.color = color;
+        Debug.Log(leftCross.color);
+        midCross.color = color;
+        rightCross.color = color;
+
     }
 }
