@@ -27,7 +27,7 @@ namespace FallingObject {
         void setValues()
         {
             //valueText = this.gameObject.GetComponent < TextMeshPro>();
-            _value = Random.Range(1, 11);
+            _value = Random.Range(1, 10);
             valueText.text = _value.ToString();
         }
 

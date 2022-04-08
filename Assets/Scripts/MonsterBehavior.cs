@@ -46,6 +46,6 @@ public class MonsterBehavior : MonoBehaviour
 
     private void UpdateScore()
     {
-        scoreValue.text = $"SCORE:\n{++_score}";
+        scoreValue.text = $"WYNIK:\n{++_score}";
     }
 }

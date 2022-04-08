@@ -6,12 +6,14 @@ using FallingObject;
 public class GameController : MonoBehaviour
 {
     [SerializeField] FallingObject.FallingObject ObjectToSpawn;
+    public PauseMenu menu;
     public const float LEFT_SIDE_X = -3.7f;
     public const float RIGHT_SIDE_X = 3.7f;
     public const float SPAWN_HEIGHT = 10.0f;
     public double timeBeetwinSpawns;
     public double lastSpawnTime;
     public short mistakeCounter;
+    public MusicManager musicManager;
 
     public SpriteRenderer leftCross;
     public SpriteRenderer rightCross;
@@ -56,7 +58,13 @@ public class GameController : MonoBehaviour
         if (mistakeCounter == 3)
         {
             rightCross.color = new Color(1f, 1f, 1f, 1f);
+            menu.ActivateEndMenu();
         }
+
+        musicManager.UpdateMusicPlayer(mistakeCounter);
+
+        
+
     }
 
     void CrossInit()
