@@ -1113,22 +1113,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2360253169474342262, guid: a84bac8cb7db1aa4f82036e4bfc7d943, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0.97547174
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360253169474342262, guid: a84bac8cb7db1aa4f82036e4bfc7d943, type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360253169474342262, guid: a84bac8cb7db1aa4f82036e4bfc7d943, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0.9828083
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360253169474342262, guid: a84bac8cb7db1aa4f82036e4bfc7d943, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294574075
-      objectReference: {fileID: 0}
     - target: {fileID: 2360253170381725219, guid: a84bac8cb7db1aa4f82036e4bfc7d943, type: 3}
       propertyPath: m_Name
       value: MainGameCanvas
