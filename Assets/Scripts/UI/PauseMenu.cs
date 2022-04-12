@@ -2,13 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool isPaused = false;
     public GameObject pauseMenu;
     public GameObject endMenu;
-   
+    public Toggle SoundToggle;
+    public Toggle MusicToggle;
+
+
+    private void Start()
+    {
+       
+    }
+
+    public void OnSoundToggleChange()
+    {
+        Debug.Log(SoundToggle.isOn);
+        SoundToggle.isOn = !SoundToggle.isOn;
+    }
+
+
     public void Pause()
     {
         pauseMenu.SetActive(true);
