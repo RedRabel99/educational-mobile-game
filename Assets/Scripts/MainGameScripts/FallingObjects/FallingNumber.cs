@@ -37,17 +37,5 @@ namespace FallingObject {
            // Destroy(GameObject);
         
         }
-
-        void OnTriggerEnter(Collider other)
-        {
-            Debug.Log(other.gameObject.name);
-            Debug.Log("XD");
-        }
-
-        void OnTriggerStay(Collider other)
-        {
-            Debug.Log(other.gameObject.name);
-            Debug.Log("XD");
-        }
     }
 }
