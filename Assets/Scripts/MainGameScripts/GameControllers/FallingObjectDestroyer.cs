@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class FallingObjectDestroyer : MonoBehaviour
 {
-    public GameObject gameController;
+    public GameController gameController;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        bool var = collision.gameObject.GetComponent<FallingObject.FallingObject>().IsCorrect(0);
+        bool var = collision.gameObject.GetComponent<FallingObject.FallingObject>().IsCorrect(gameController.gameMode);
 
         Destroy(collision.gameObject);
         if (var)

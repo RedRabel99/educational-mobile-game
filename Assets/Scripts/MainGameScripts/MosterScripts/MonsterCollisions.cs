@@ -13,7 +13,7 @@ public class MonsterCollisions : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        bool var = collision.gameObject.GetComponent<FallingObject.FallingObject>().IsCorrect(0);
+        bool var = collision.gameObject.GetComponent<FallingObject.FallingObject>().IsCorrect(monsterBehavior.gameController.gameMode);
         Debug.Log(collision.name);
         Destroy(collision.gameObject);
         if (var)

@@ -19,8 +19,9 @@ namespace FallingObject {
         
         }
 
-        public override bool IsCorrect(int parity) { 
-            
+        public override bool IsCorrect(GameMode gameMode) {
+
+            int parity = gameMode.CurrentGameMode[0];
             return _value % 2 == parity ? true : false;
         }
 

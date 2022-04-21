@@ -10,17 +10,21 @@ public class FallingObjectSpawner : MonoBehaviour
     public double timeBeetwinSpawns;
     const float SPAWN_HEIGHT = 10f;
     float lastSpawnTime;
+    public bool CanSpawn;
+    //float timer;
 
     void Start()
     {
         spawnBorders = new SpawnBorders(gameController.mainCamera);
         lastSpawnTime = Time.time;
+        CanSpawn = true;
+    //    timer = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        SpawnFallingObject();
+       if(CanSpawn) SpawnFallingObject();
     }
 
     void SpawnFallingObject()
@@ -28,11 +32,12 @@ public class FallingObjectSpawner : MonoBehaviour
         if (Time.time - lastSpawnTime > timeBeetwinSpawns)
         {
             lastSpawnTime = Time.time;
-            Debug.Log("LEFT " + spawnBorders.LeftScreenBorder);
+            
             float randomWidth = Random.Range(spawnBorders.LeftScreenBorder, spawnBorders.RightScreenBorder);
             Vector3 spawningPosition = new Vector3(randomWidth, SPAWN_HEIGHT, 0f);
             Instantiate(gameController.ObjectToSpawn, spawningPosition, transform.rotation);
         }
 
     }
+
 }
