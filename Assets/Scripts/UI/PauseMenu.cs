@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool isPaused = false;
+    public bool isPaused = false;
     public GameObject pauseMenu;
     public GameObject endMenu;
-    public Toggle SoundToggle;
-    public Toggle MusicToggle;
+    public GameObject PauseCover;
+    [SerializeField] GameController gameController;
 
 
     private void Start()
@@ -18,25 +18,29 @@ public class PauseMenu : MonoBehaviour
        
     }
 
-    public void OnSoundToggleChange()
-    {
-        Debug.Log(SoundToggle.isOn);
-        SoundToggle.isOn = !SoundToggle.isOn;
-    }
-
-
     public void Pause()
     {
         pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
+        gameController.pauseController.PauseFallingObjects();
+        PauseCover.SetActive(true);
         isPaused = true;
+
     }
 
     public void Resume()
     {
-        isPaused = false;
         pauseMenu.SetActive(false);
-        Time.timeScale = 1.0f;
+        PauseCover.SetActive(false);
+        StartCoroutine(ResumeAfterCountdown());
+    }
+
+    IEnumerator ResumeAfterCountdown()
+    {
+        yield return StartCoroutine(gameController.countdown.CountdownToStart(3));
+        Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAA");
+        gameController.pauseController.UnpauseFallingObjects();
+        isPaused = false;
     }
 
     public void Restart()
@@ -52,6 +56,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
         Time.timeScale = 0f;
         endMenu.SetActive(true);
+        PauseCover.SetActive(true);
 
 
     }

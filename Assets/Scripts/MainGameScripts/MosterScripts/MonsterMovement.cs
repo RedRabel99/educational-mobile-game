@@ -6,6 +6,7 @@ public class MonsterMovement : MonoBehaviour
 {
     [SerializeField] MonsterBehavior monsterBehavior;
     SpawnBorders screenBorders;
+    
     void Start()
     {
         SetInitialPosition();
@@ -19,6 +20,7 @@ public class MonsterMovement : MonoBehaviour
 
     void UpdateMonsterPosition()
     {
+        if (monsterBehavior.gameController.pauseMenu.isPaused) return;
         Vector2 inputPosition = monsterBehavior.touchControls.Touch.TouchPosition.ReadValue<Vector2>();
         Vector3 inWorldInputPosition = monsterBehavior.mainCamera.ScreenToWorldPoint(inputPosition);
 

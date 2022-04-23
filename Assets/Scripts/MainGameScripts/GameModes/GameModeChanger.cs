@@ -28,13 +28,13 @@ public class GameModeChanger : MonoBehaviour
 
     void UpdateLastTimeChange()
     {
-        if (Time.timeScale == 0) return;
+        if (gameController.pauseMenu.isPaused) return;
         if (Time.time - lastTimeChanged <= minimumTimeBetweeenChange) return;
-        Debug.Log($"time: {Time.time - lastTimeChanged} RANDOM: ");
+       // Debug.Log($"time: {Time.time - lastTimeChanged} RANDOM: ");
         var generator = new System.Random();
         if (generator.Next(100) <= Time.time - lastTimeChanged)
         {
-            Debug.Log($"TRUEEEEEEEEE");
+        //    Debug.Log($"TRUEEEEEEEEE");
             changeGameMode = true;
         }
 

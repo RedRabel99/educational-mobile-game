@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MistakeCounter : MonoBehaviour
 {
     [SerializeField] GameController gameController;
-    [SerializeField] SpriteRenderer [] crosses;
+    [SerializeField] Image [] crosses;
     short mistakeCounter;
     void Start()
     {
@@ -14,7 +15,7 @@ public class MistakeCounter : MonoBehaviour
     public void IncreaseMistakeValue()
     {
         crosses[++mistakeCounter - 1].color = new Color(1f, 1f, 1f, 1f);
-        if (mistakeCounter == 3) gameController.menu.ActivateEndMenu();
+        if (mistakeCounter == 3) gameController.pauseMenu.ActivateEndMenu();
 
         //musicManager.UpdateMusicPlayer(mistakeCounter);
     }

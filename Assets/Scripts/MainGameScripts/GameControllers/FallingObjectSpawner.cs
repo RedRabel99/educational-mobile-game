@@ -24,7 +24,7 @@ public class FallingObjectSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(CanSpawn) SpawnFallingObject();
+       if(CanSpawn && !gameController.pauseMenu.isPaused) SpawnFallingObject();
     }
 
     void SpawnFallingObject()
