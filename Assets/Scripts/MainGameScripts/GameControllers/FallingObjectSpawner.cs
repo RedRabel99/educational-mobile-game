@@ -11,6 +11,7 @@ public class FallingObjectSpawner : MonoBehaviour
     const float SPAWN_HEIGHT = 10f;
     float lastSpawnTime;
     public bool CanSpawn;
+    public bool isSlowed;
     //float timer;
 
     void Start()
@@ -18,6 +19,7 @@ public class FallingObjectSpawner : MonoBehaviour
         spawnBorders = new SpawnBorders(gameController.mainCamera);
         lastSpawnTime = Time.time;
         CanSpawn = true;
+        isSlowed= false;
     //    timer = 0f;
     }
 
@@ -35,7 +37,8 @@ public class FallingObjectSpawner : MonoBehaviour
             
             float randomWidth = Random.Range(spawnBorders.LeftScreenBorder, spawnBorders.RightScreenBorder);
             Vector3 spawningPosition = new Vector3(randomWidth, SPAWN_HEIGHT, 0f);
-            Instantiate(gameController.ObjectToSpawn, spawningPosition, transform.rotation);
+            FallingObject.FallingObject spawnedObject = Instantiate(gameController.ObjectToSpawn, spawningPosition, transform.rotation);
+            if(isSlowed) spawnedObject.gameObject.GetComponent<Rigidbody2D>().drag = 4f;
         }
 
     }

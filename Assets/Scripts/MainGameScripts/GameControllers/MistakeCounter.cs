@@ -20,6 +20,16 @@ public class MistakeCounter : MonoBehaviour
         //musicManager.UpdateMusicPlayer(mistakeCounter);
     }
 
+    public void DecreaseMistakeValue()
+    {
+        if (mistakeCounter > 0) crosses[--mistakeCounter].color = new Color(50f / 255f, 45f / 255f, 45f / 255f, 255f / 255f);
+    }
+
+    public bool AreThereMistakes()
+    {
+        return mistakeCounter > 0;
+    }
+
     void CrossInit()
     {
         Color color = new Color(50f / 255f, 45f / 255f, 45f / 255f, 255f / 255f);

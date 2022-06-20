@@ -6,6 +6,7 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     private int _scoreValue;
+    public int ScoreMultiplier;
     [SerializeField] GameController gameController;
     [SerializeField] TMP_Text scoreValue;
     [SerializeField] TMP_Text endResult;
@@ -13,12 +14,14 @@ public class Score : MonoBehaviour
     void Start()
     {
         _scoreValue = 0;
+        ScoreMultiplier = 1;
     }
 
 
     internal void UpdateScore()
     {
-        scoreValue.text = $"WYNIK:\n{++_scoreValue}";
+        _scoreValue += ScoreMultiplier;
+        scoreValue.text = $"WYNIK:\n{_scoreValue}";
         endResult.text = $"WYNIK KONCOWY\n{_scoreValue}";
         gameController.fallingObjectSpawner.timeBeetwinSpawns -= 0.01;
     }
