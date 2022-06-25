@@ -8,23 +8,30 @@ public class CoinSystem : MonoBehaviour
 
     [SerializeField] TMP_Text[] coinTexts;
     int coinAmount;
+    public int CoinAmount { get { return coinAmount; } }
 
     void Start()
     {
-        
+        SetCurrentCoinAmount();
+        UpdateCoinTexts();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            Debug.Log("BPRESSED");
+            UpdateCoinAmount(100);
+            UpdateCoinTexts();
+        }
     }
 
     public void UpdateCoinTexts()
     {
         foreach(var text in coinTexts)
         {
-            text.text = $"X{coinAmount}";
+            text.text = $"{coinAmount}";
         }
     }
 
@@ -33,9 +40,9 @@ public class CoinSystem : MonoBehaviour
         coinAmount = PlayerPrefs.GetInt("coins", 0);
     }
 
-    public void UpdtadeCoinAmount(int additionalAmount)
+    public void UpdateCoinAmount(int additionalAmount)
     {
-        PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins", 0));
+        PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins", 0) + additionalAmount);
         coinAmount = PlayerPrefs.GetInt("coins", 0);
         UpdateCoinTexts();
     }
