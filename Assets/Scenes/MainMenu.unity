@@ -553,7 +553,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1988957059}
-        m_TargetAssemblyTypeName: BuffSystem, Assembly-CSharp
+        m_TargetAssemblyTypeName: BuffSystemMenu, Assembly-CSharp
         m_MethodName: BuyErrorBUff
         m_Mode: 1
         m_Arguments:
@@ -647,6 +647,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &216315675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 216315677}
+  - component: {fileID: 216315676}
+  m_Layer: 0
+  m_Name: BestScoreController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &216315676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216315675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887fbc00abeabc143ae2e1cbe11ebe78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recordText: {fileID: 1781836278}
+--- !u!4 &216315677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216315675}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.7727222, y: -4.5365767, z: -2.284918}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &275400581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,7 +1632,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1988957059}
-        m_TargetAssemblyTypeName: BuffSystem, Assembly-CSharp
+        m_TargetAssemblyTypeName: BuffSystemMenu, Assembly-CSharp
         m_MethodName: BuyScoreBUff
         m_Mode: 1
         m_Arguments:
@@ -4918,7 +4962,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1988957059}
-        m_TargetAssemblyTypeName: BuffSystem, Assembly-CSharp
+        m_TargetAssemblyTypeName: BuffSystemMenu, Assembly-CSharp
         m_MethodName: BuyTimeBUff
         m_Mode: 1
         m_Arguments:
@@ -4928,7 +4972,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!1 &1707357858
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,10 @@ public class Score : MonoBehaviour
         ScoreMultiplier = 1;
     }
 
+    public int GetCurrentScore()
+    {
+        return _scoreValue;
+    }
 
     internal void UpdateScore()
     {

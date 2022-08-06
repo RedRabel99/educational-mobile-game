@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class BuffSystem : MonoBehaviour
+public class BuffSystemMenu : MonoBehaviour
 {
     [SerializeField] TMP_Text ErrorBuffAmountText;
     [SerializeField] TMP_Text ScoreBuffAmountText;

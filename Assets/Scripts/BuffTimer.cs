@@ -25,8 +25,6 @@ public abstract class BuffTimer : MonoBehaviour
     void Update()
     {
         float currentTime = Mathf.Abs(currentBuffTime - Time.time);
-        
-        Debug.Log($"CurrentTime = {currentTime}, currentBufftime = {currentBuffTime}, TIme = {Time.time}, isRunning= {isRunning}");
         if (isRunning)
         {
             if (currentTime >= buffTime)

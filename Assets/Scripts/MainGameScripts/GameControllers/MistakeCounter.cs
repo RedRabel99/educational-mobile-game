@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,9 @@ public class MistakeCounter : MonoBehaviour
     public void IncreaseMistakeValue()
     {
         crosses[++mistakeCounter - 1].color = new Color(1f, 1f, 1f, 1f);
+        if (gameController.buffSystem.isBuffAvailable(Convert.ToInt32(ButtonNames.Error))){
+            gameController.buffSystem.SetButtonActive(Convert.ToInt32(ButtonNames.Error), true);
+        }
         if (mistakeCounter == 3) gameController.pauseMenu.ActivateEndMenu();
 
         //musicManager.UpdateMusicPlayer(mistakeCounter);

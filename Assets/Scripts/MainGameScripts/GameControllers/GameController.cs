@@ -14,7 +14,8 @@ public class GameController : MonoBehaviour
     public GameMode gameMode;
     public Countdown countdown;
     public PauseController pauseController;
-
+    public BuffSystemInGame buffSystem;
+    public BestScoreController bestScoreController;
     void Start()
     {
         Time.timeScale = 1f; //nvm
