@@ -57,6 +57,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
         Time.timeScale = 0f;
         gameController.bestScoreController.SetBestScoreText(gameController.score.GetCurrentScore());
+        gameController.coinAdder.AddCoins(gameController.score.GetCurrentScore(), gameController.mistakeCounter.GetAllMistakes());
         endMenu.SetActive(true);
         coinAnimator.Play("CoinAnimation", 0, 0.0f);
         PauseCover.SetActive(true);

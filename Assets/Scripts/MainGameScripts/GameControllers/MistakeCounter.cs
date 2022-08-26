@@ -9,6 +9,7 @@ public class MistakeCounter : MonoBehaviour
     [SerializeField] GameController gameController;
     [SerializeField] Image [] crosses;
     short mistakeCounter;
+    int allMistakes;
     void Start()
     {
         CrossInit();
@@ -16,12 +17,18 @@ public class MistakeCounter : MonoBehaviour
     public void IncreaseMistakeValue()
     {
         crosses[++mistakeCounter - 1].color = new Color(1f, 1f, 1f, 1f);
+        allMistakes++;
         if (gameController.buffSystem.isBuffAvailable(Convert.ToInt32(ButtonNames.Error))){
             gameController.buffSystem.SetButtonActive(Convert.ToInt32(ButtonNames.Error), true);
         }
         if (mistakeCounter == 3) gameController.pauseMenu.ActivateEndMenu();
 
         //musicManager.UpdateMusicPlayer(mistakeCounter);
+    }
+
+    public int GetAllMistakes()
+    {
+        return allMistakes;
     }
 
     public void DecreaseMistakeValue()

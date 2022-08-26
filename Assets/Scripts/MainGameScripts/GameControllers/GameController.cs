@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     public PauseController pauseController;
     public BuffSystemInGame buffSystem;
     public BestScoreController bestScoreController;
+    public CoinAdder coinAdder;
     void Start()
     {
         Time.timeScale = 1f; //nvm

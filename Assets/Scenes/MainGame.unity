@@ -850,6 +850,7 @@ GameObject:
   - component: {fileID: 1706099363}
   - component: {fileID: 1706099364}
   - component: {fileID: 1706099365}
+  - component: {fileID: 1706099366}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -880,6 +881,7 @@ MonoBehaviour:
   pauseController: {fileID: 1706099363}
   buffSystem: {fileID: 1706099364}
   bestScoreController: {fileID: 1706099365}
+  coinAdder: {fileID: 1706099366}
 --- !u!4 &1706099359
 Transform:
   m_ObjectHideFlags: 0
@@ -991,6 +993,20 @@ MonoBehaviour:
   gameController: {fileID: 1706099358}
   bestScoreType: 0
   recordText: {fileID: 132651986}
+--- !u!114 &1706099366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706099357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e77e4ff36265dc479fb7de266e94051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 1706099358}
+  addedCoinsText: {fileID: 2360253169376624995}
 --- !u!1 &1723746137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,6 +1460,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a84bac8cb7db1aa4f82036e4bfc7d943, type: 3}
+--- !u!114 &2360253169376624995 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 774777327, guid: a84bac8cb7db1aa4f82036e4bfc7d943, type: 3}
+  m_PrefabInstance: {fileID: 2360253169376624994}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2360253169376624996 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6503156650261707803, guid: a84bac8cb7db1aa4f82036e4bfc7d943, type: 3}
