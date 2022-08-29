@@ -2682,10 +2682,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: WIEKSZE/MNIEJSZE
+  m_text: "WI\u0118KSZE/MNIEJSZE"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5119d3fd94cc32c4da00eb3d9cae3a86, type: 2}
-  m_sharedMaterial: {fileID: -5940094154184995474, guid: 5119d3fd94cc32c4da00eb3d9cae3a86, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 50246b0b7f7b04145b4b9c23a1c7af43, type: 2}
+  m_sharedMaterial: {fileID: -8551135659897696277, guid: 50246b0b7f7b04145b4b9c23a1c7af43, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3369,10 +3369,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "G\u0141\xF3D"
+  m_text: "G\u0141\xD3D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5119d3fd94cc32c4da00eb3d9cae3a86, type: 2}
-  m_sharedMaterial: {fileID: -5940094154184995474, guid: 5119d3fd94cc32c4da00eb3d9cae3a86, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 50246b0b7f7b04145b4b9c23a1c7af43, type: 2}
+  m_sharedMaterial: {fileID: -8551135659897696277, guid: 50246b0b7f7b04145b4b9c23a1c7af43, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3718,10 +3718,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PARZYSTOSC
+  m_text: "PARZYSTO\u015A\u0106"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5119d3fd94cc32c4da00eb3d9cae3a86, type: 2}
-  m_sharedMaterial: {fileID: -5940094154184995474, guid: 5119d3fd94cc32c4da00eb3d9cae3a86, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 50246b0b7f7b04145b4b9c23a1c7af43, type: 2}
+  m_sharedMaterial: {fileID: -8551135659897696277, guid: 50246b0b7f7b04145b4b9c23a1c7af43, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4629,10 +4629,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ODEJMUJE JEDEN BLAD W TRAKCIE GRY
+  m_text: "ODEJMUJE JEDEN B\u0141\u0104D W TRAKCIE GRY"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5119d3fd94cc32c4da00eb3d9cae3a86, type: 2}
-  m_sharedMaterial: {fileID: -5940094154184995474, guid: 5119d3fd94cc32c4da00eb3d9cae3a86, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 50246b0b7f7b04145b4b9c23a1c7af43, type: 2}
+  m_sharedMaterial: {fileID: -8551135659897696277, guid: 50246b0b7f7b04145b4b9c23a1c7af43, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
