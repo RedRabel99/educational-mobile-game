@@ -21,5 +21,7 @@ public class FallingObjectDestroyer : MonoBehaviour
     private void UpdateScore()
     {
         gameController.GetComponent<GameController>().mistakeCounter.IncreaseMistakeValue();
+        gameController.musicManager.PlayErrorSound();
+        gameController.monsterVisuals.StartMistakeAnimation();
     }
 }

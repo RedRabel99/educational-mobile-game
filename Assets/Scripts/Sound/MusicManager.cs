@@ -5,23 +5,19 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
    // public AudioSource[] musicPlayers;
-    AudioSource audioSource;
+    [SerializeField] AudioSource musicSource;
+    [SerializeField] AudioSource soundSource;
     public int currentPlayer;
     [SerializeField]
     public AudioComponent AudioSettings;
     void Start()
     {
         currentPlayer = 0;
-       //musicPlayers[currentPlayer].Play();
-        audioSource = GetComponent<AudioSource>();
-        Debug.Log(audioSource);
-        Debug.Log(AudioSettings);
-        Debug.Log(AudioSettings.AudioClips);
-        audioSource.clip = AudioSettings.AudioClips[currentPlayer];
-        audioSource.loop = true;
-        audioSource.Play();
-        audioSource.volume = AudioSettings.MusicIsOn ? 1f : 0f;
-        Debug.Log("DUPA" + AudioSettings.MusicIsOn);
+        musicSource.clip = AudioSettings.AudioClips[currentPlayer];
+        musicSource.loop = true;
+        musicSource.Play();
+        musicSource.volume = AudioSettings.MusicIsOn ? 0.5f : 0f;
+        soundSource.volume = AudioSettings.SoundIsOn ? 1f : 0f;
     }
 
     // Update is called once per frame
@@ -42,11 +38,23 @@ public class MusicManager : MonoBehaviour
     public void ToggleMusicState()
     {
         AudioSettings.MusicIsOn = !AudioSettings.MusicIsOn;
-        audioSource.volume = AudioSettings.MusicIsOn ? 1f : 0f;
+        musicSource.volume = AudioSettings.MusicIsOn ? 0.5f : 0f;
     }
 
     public void ToggleSoundState()
     {
         AudioSettings.SoundIsOn = !AudioSettings.SoundIsOn;
+        soundSource.volume = AudioSettings.SoundIsOn ? 1f : 0f;
+    }
+
+    public void PlayErrorSound()
+    {
+        soundSource.PlayOneShot(AudioSettings.AudioClips[1]);
+        Debug.Log("AAAAAAAAAAAAAAAAAAASFGas");
+    }
+
+    public void PlayScoreSound()
+    {
+        soundSource.PlayOneShot(AudioSettings.AudioClips[2]);
     }
 }

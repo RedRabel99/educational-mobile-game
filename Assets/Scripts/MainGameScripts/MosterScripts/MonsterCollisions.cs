@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterCollisions : MonoBehaviour
 {
     [SerializeField] MonsterBehavior monsterBehavior;
+    [SerializeField] GameController gameController;
 
     void Start()
     {
@@ -18,10 +19,13 @@ public class MonsterCollisions : MonoBehaviour
         Destroy(collision.gameObject);
         if (var)
         {
+            gameController.musicManager.PlayScoreSound();
             monsterBehavior.gameController.score.UpdateScore();
         }
         else
         {
+           gameController.musicManager.PlayErrorSound();
+           gameController.monsterVisuals.StartMistakeAnimation();
            monsterBehavior.gameController.mistakeCounter.IncreaseMistakeValue();
         }
 

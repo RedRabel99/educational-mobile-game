@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 namespace FallingObject { 
-    public class FallingNumber : FallingObject
+    public class FallingParityNumber : FallingObject
     {
         private int _value;
         public TMP_Text valueText;

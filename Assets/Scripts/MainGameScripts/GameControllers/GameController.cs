@@ -17,6 +17,8 @@ public class GameController : MonoBehaviour
     public BuffSystemInGame buffSystem;
     public BestScoreController bestScoreController;
     public CoinAdder coinAdder;
+    public MusicManager musicManager;
+    public MonsterVisuals monsterVisuals;
     void Start()
     {
         Time.timeScale = 1f; //nvm

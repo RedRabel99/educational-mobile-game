@@ -72,21 +72,21 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 0
+    m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 500
+    m_PVRSampleCount: 512
     m_PVRBounces: 2
-    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentSampleCount: 256
     m_PVREnvironmentReferencePointCount: 2048
-    m_PVRFilteringMode: 2
-    m_PVRDenoiserTypeDirect: 0
-    m_PVRDenoiserTypeIndirect: 0
-    m_PVRDenoiserTypeAO: 0
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVREnvironmentMIS: 0
+    m_PVREnvironmentMIS: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -372,8 +372,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 489659470}
-  - component: {fileID: 489659471}
   - component: {fileID: 489659472}
+  - component: {fileID: 489659473}
   m_Layer: 0
   m_Name: GameMode
   m_TagString: Untagged
@@ -395,19 +395,6 @@ Transform:
   m_Father: {fileID: 1706099359}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &489659471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489659469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 405f4faad9c58d04a85d5b489276273d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentGameMode: 
 --- !u!114 &489659472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,8 +408,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentGameModeText: {fileID: 384731785}
-  gameMode: {fileID: 489659471}
+  gameMode: {fileID: 489659473}
   gameController: {fileID: 1706099358}
+--- !u!114 &489659473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489659469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d161ed434823844b3ca835ea0dd821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentGameMode: 
 --- !u!1 &511144889
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,13 +888,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4e0535cf099dc459ba9b80762db1c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectToSpawn: {fileID: -4297167074672504369, guid: 3f226efe3d756a24cb100d16a5a1cab6, type: 3}
+  ObjectToSpawn: {fileID: 6455079902599669939, guid: 9dad8c48caf050943b021f18e035be4d, type: 3}
   fallingObjectSpawner: {fileID: 1706099360}
   pauseMenu: {fileID: 751130900}
   score: {fileID: 1706099361}
   mistakeCounter: {fileID: 1706099362}
   mainCamera: {fileID: 519420031}
-  gameMode: {fileID: 489659471}
+  gameMode: {fileID: 489659473}
   countdown: {fileID: 2360253169376624996}
   pauseController: {fileID: 1706099363}
   buffSystem: {fileID: 1706099364}
@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 1706099358}
-  bestScoreType: 0
+  bestScoreType: 2
   recordText: {fileID: 132651986}
 --- !u!114 &1706099366
 MonoBehaviour:
@@ -1267,7 +1267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845845015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.38, z: 0.01}
+  m_LocalPosition: {x: 0, y: 0, z: 0.01}
   m_LocalScale: {x: 0.79, y: 0.79, z: 0.79}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1480,12 +1480,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5987990856211992904, guid: a84bac8cb7db1aa4f82036e4bfc7d943, type: 3}
       propertyPath: m_text
-      value: "\u0104\u0118\u0106\u017B\u0179\xD3\u0141"
+      value: "WI\u0118KSZE NIZ 4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987990856211992904, guid: a84bac8cb7db1aa4f82036e4bfc7d943, type: 3}
+      propertyPath: m_fontSize
+      value: 10.68
       objectReference: {fileID: 0}
     - target: {fileID: 5987990856211992904, guid: a84bac8cb7db1aa4f82036e4bfc7d943, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 50246b0b7f7b04145b4b9c23a1c7af43, type: 2}
+    - target: {fileID: 5987990856211992904, guid: a84bac8cb7db1aa4f82036e4bfc7d943, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10.68
+      objectReference: {fileID: 0}
     - target: {fileID: 5987990856211992904, guid: a84bac8cb7db1aa4f82036e4bfc7d943, type: 3}
       propertyPath: m_sharedMaterial
       value: 

@@ -72,21 +72,21 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 0
+    m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 500
+    m_PVRSampleCount: 512
     m_PVRBounces: 2
-    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentSampleCount: 256
     m_PVREnvironmentReferencePointCount: 2048
-    m_PVRFilteringMode: 2
-    m_PVRDenoiserTypeDirect: 0
-    m_PVRDenoiserTypeIndirect: 0
-    m_PVRDenoiserTypeAO: 0
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVREnvironmentMIS: 0
+    m_PVREnvironmentMIS: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -238,14 +238,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379381208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09, y: -6.3, z: 0}
+  m_LocalPosition: {x: -0.09, y: -2.69, z: 0}
   m_LocalScale: {x: 0.28873056, y: 0.28873056, z: 0.28873056}
   m_Children:
   - {fileID: 1544878582}
   - {fileID: 1723746138}
   - {fileID: 1803252626}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &379381211
 MonoBehaviour:
@@ -372,8 +372,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 489659470}
-  - component: {fileID: 489659471}
   - component: {fileID: 489659472}
+  - component: {fileID: 489659471}
   m_Layer: 0
   m_Name: GameMode
   m_TagString: Untagged
@@ -404,7 +404,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 489659469}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 405f4faad9c58d04a85d5b489276273d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1acd0ce0d11a2dc4284602a368349a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentGameMode: 
@@ -609,7 +609,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &659141897 stripped
 MonoBehaviour:
@@ -888,7 +888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4e0535cf099dc459ba9b80762db1c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectToSpawn: {fileID: -4297167074672504369, guid: 3f226efe3d756a24cb100d16a5a1cab6, type: 3}
+  ObjectToSpawn: {fileID: -5878950289656684784, guid: 9710075f1a4dec44ca12a8d361f4612f, type: 3}
   fallingObjectSpawner: {fileID: 1706099360}
   pauseMenu: {fileID: 751130900}
   score: {fileID: 1706099361}
@@ -915,7 +915,7 @@ Transform:
   m_Children:
   - {fileID: 489659470}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1706099360
 MonoBehaviour:
@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 1706099358}
-  bestScoreType: 0
+  bestScoreType: 1
   recordText: {fileID: 132651986}
 --- !u!114 &1706099366
 MonoBehaviour:
@@ -1267,11 +1267,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845845015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.38, z: 0.01}
+  m_LocalPosition: {x: 0, y: 0, z: 0.01}
   m_LocalScale: {x: 0.79, y: 0.79, z: 0.79}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1920837704 stripped
 MonoBehaviour:
@@ -1404,7 +1404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2360253170381725223, guid: a84bac8cb7db1aa4f82036e4bfc7d943, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2360253170381725223, guid: a84bac8cb7db1aa4f82036e4bfc7d943, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1535,7 +1535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4726414308609711765, guid: 21fe074f5a8e53244a80f3641e7afb77, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4726414308609711765, guid: 21fe074f5a8e53244a80f3641e7afb77, type: 3}
       propertyPath: m_LocalPosition.x
