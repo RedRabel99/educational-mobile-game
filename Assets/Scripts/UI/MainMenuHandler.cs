@@ -7,6 +7,8 @@ public class MainMenuHandler : MonoBehaviour
 {
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject shopMenu;
+    [SerializeField] GameObject bestScoreMenu;
+    [SerializeField] GameObject aboutMenu;
 
 
     public void LoadFirstGame()
@@ -32,6 +34,30 @@ public class MainMenuHandler : MonoBehaviour
     public void FromShopToMainMenu()
     {
         shopMenu.SetActive(false);
+        mainMenu.SetActive(true);
+    }
+
+    public void OpenBestScore()
+    {
+        mainMenu.SetActive(false);
+        bestScoreMenu.SetActive(true);
+    }
+
+    public void FromBestScoreToMainMenu()
+    {
+        bestScoreMenu.SetActive(false);
+        mainMenu.SetActive(true);
+    }
+
+    public void OpenAbout()
+    {
+        mainMenu.SetActive(false);
+        aboutMenu.SetActive(true);
+    }
+
+    public void FromAboutToMainMenu()
+    {
+        aboutMenu.SetActive(false);
         mainMenu.SetActive(true);
     }
 }

@@ -11,7 +11,6 @@ public class PauseMenu : MonoBehaviour
     public GameObject endMenu;
     public GameObject PauseCover;
     [SerializeField] GameController gameController;
-    [SerializeField] Animator coinAnimator;
 
 
     private void Start()
@@ -59,7 +58,6 @@ public class PauseMenu : MonoBehaviour
         gameController.bestScoreController.SetBestScoreText(gameController.score.GetCurrentScore());
         gameController.coinAdder.AddCoins(gameController.score.GetCurrentScore(), gameController.mistakeCounter.GetAllMistakes());
         endMenu.SetActive(true);
-        coinAnimator.Play("CoinAnimation", 0, 0.0f);
         PauseCover.SetActive(true);
 
 
@@ -67,6 +65,7 @@ public class PauseMenu : MonoBehaviour
 
     public void OpenMainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
 }

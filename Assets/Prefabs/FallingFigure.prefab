@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8979741118784088470}
   - component: {fileID: 8979741118784088471}
   - component: {fileID: -5878950289656684784}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FallingFigure
   m_TagString: FallingObject
   m_Icon: {fileID: 0}

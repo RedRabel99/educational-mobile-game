@@ -7,7 +7,7 @@ public class ParityGameMode : GameMode
 
     public void Awake()
     {
-        CurrentGameMode = new int[1];
+        CurrentGameMode = new int[] {Random.Range(0, 2)};
     }
 
     public override void SetGameMode()

@@ -8,6 +8,7 @@ public class GameModeChanger : MonoBehaviour
     [SerializeField] TMP_Text currentGameModeText;
     [SerializeField] GameMode gameMode;
     [SerializeField] GameController gameController;
+    [SerializeField] TMP_Text newObjectiveText;
     float lastTimeChanged;
     float minimumTimeBetweeenChange = 13f;
     bool changeGameMode;
@@ -59,5 +60,12 @@ public class GameModeChanger : MonoBehaviour
     {
         gameMode.SetGameMode();
         currentGameModeText.text = gameMode.GetGameModeName();
+        newObjectiveText.gameObject.SetActive(true);
+        Invoke("DisableNewObjectiveText", 1.5f);
+    }
+
+    void DisableNewObjectiveText()
+    {
+        newObjectiveText.gameObject.SetActive(false);
     }
 }

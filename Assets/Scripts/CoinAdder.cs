@@ -7,10 +7,12 @@ public class CoinAdder : MonoBehaviour
 {
     [SerializeField] GameController gameController;
     [SerializeField] TMP_Text addedCoinsText;
+    [SerializeField][Range(1, 5)] int multiplier;
 
     int CalculateCoinIncome(int score, int mistakes)
     {
-        return score * 2 - mistakes;
+        int result = score * multiplier - mistakes;
+        return result > 0 ? result : 0;
     }
 
     void UpdateCoinText(int coinsAdded)
