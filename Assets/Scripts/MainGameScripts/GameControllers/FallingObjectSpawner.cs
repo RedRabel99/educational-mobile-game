@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FallingObjectSpawner : MonoBehaviour
 {
-
     [SerializeField] GameController gameController;
     SpawnBorders spawnBorders;
     public double timeBeetwinSpawns;
@@ -12,7 +11,6 @@ public class FallingObjectSpawner : MonoBehaviour
     float lastSpawnTime;
     public bool CanSpawn;
     public bool isSlowed;
-    //float timer;
 
     void Start()
     {
@@ -20,10 +18,8 @@ public class FallingObjectSpawner : MonoBehaviour
         lastSpawnTime = Time.time;
         CanSpawn = true;
         isSlowed= false;
-    //    timer = 0f;
     }
 
-    // Update is called once per frame
     void Update()
     {
        if(CanSpawn && !gameController.pauseMenu.isPaused) SpawnFallingObject();
@@ -37,10 +33,8 @@ public class FallingObjectSpawner : MonoBehaviour
             
             float randomWidth = Random.Range(spawnBorders.LeftScreenBorder, spawnBorders.RightScreenBorder);
             Vector3 spawningPosition = new Vector3(randomWidth, SPAWN_HEIGHT, 0f);
-            FallingObject.FallingObject spawnedObject = Instantiate(gameController.ObjectToSpawn, spawningPosition, transform.rotation);
+            FallingGameObject spawnedObject = Instantiate(gameController.ObjectToSpawn, spawningPosition, transform.rotation);
             if(isSlowed) spawnedObject.gameObject.GetComponent<Rigidbody2D>().drag = 4f;
         }
-
     }
-
 }

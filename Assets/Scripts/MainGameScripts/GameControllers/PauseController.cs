@@ -21,7 +21,6 @@ public class PauseController : MonoBehaviour
 
         foreach (var fallingObject in fallingObjects)
         {
-            Debug.Log(fallingObject.name + "??????");
             fallingObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         }
     }

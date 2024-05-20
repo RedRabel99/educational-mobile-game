@@ -7,17 +7,13 @@ public class MonsterCollisions : MonoBehaviour
     [SerializeField] MonsterBehavior monsterBehavior;
     [SerializeField] GameController gameController;
 
-    void Start()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        bool var = collision.gameObject.GetComponent<FallingObject.FallingObject>().IsCorrect(monsterBehavior.gameController.gameMode);
-        Debug.Log(collision.name);
+        bool isCorrect = collision.gameObject
+            .GetComponent<FallingGameObject>()
+            .IsCorrect(monsterBehavior.gameController.gameMode);
         Destroy(collision.gameObject);
-        if (var)
+        if (isCorrect)
         {
             gameController.musicManager.PlayScoreSound();
             monsterBehavior.gameController.score.UpdateScore();

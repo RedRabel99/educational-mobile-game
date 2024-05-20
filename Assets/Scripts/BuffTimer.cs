@@ -21,7 +21,6 @@ public abstract class BuffTimer : MonoBehaviour
         timeSlider.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         float currentTime = Mathf.Abs(currentBuffTime - Time.time);

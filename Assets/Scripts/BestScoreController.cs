@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization.Settings;
 
 public enum BestScoreType
 {
@@ -15,14 +16,19 @@ public class BestScoreController : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameController gameController;
-    const string NEW_RECORD_TEXT = "NOWY NAJLEPSZY WYNIK!";
-    const string DEFAULT_RECORD_TEXT = "NAJLEPSZY WYNIK: ";
+    private string _newRecordText;
+    private string _defaultRecordText;
     const string BEST_SCORE_KEY_STRING = "BestScore";
     public BestScoreType bestScoreType;
     [SerializeField] TMP_Text recordText;
     string[] bestScoreKeys = { "ParityBestScore", "FiguresBestScore", "LesserGreaterBestScore" };
 
-
+    void Awake()
+    {
+        _newRecordText = LocalizationSettings.StringDatabase.GetLocalizedString("newRecordText");
+        _defaultRecordText =  LocalizationSettings.StringDatabase.GetLocalizedString("bestScoreText");
+    }
+    
     int GetBestScore()
     {
         return PlayerPrefs.GetInt(bestScoreKeys[(int)bestScoreType], 0);
@@ -42,10 +48,10 @@ public class BestScoreController : MonoBehaviour
     {
         if (WasBestScoreBeaten(currentScore))
         {
-            recordText.text = NEW_RECORD_TEXT;
+            recordText.text = _newRecordText;
             SetBestScore(currentScore);
             return;
         }
-        recordText.text = DEFAULT_RECORD_TEXT + $"{GetBestScore()}";
+        recordText.text = _defaultRecordText + $"{GetBestScore()}";
     }
 }

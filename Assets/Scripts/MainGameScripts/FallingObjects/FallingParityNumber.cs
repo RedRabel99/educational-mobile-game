@@ -3,40 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 namespace FallingObject { 
-    public class FallingParityNumber : FallingObject
+    public class FallingParityNumber : FallingGameObject
     {
-        private int _value;
-        public TMP_Text valueText;
+        [SerializeField] TMP_Text valueText;
         
-        void Start()
-        {
-            setValues();
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
-
         public override bool IsCorrect(GameMode gameMode) {
 
             int parity = gameMode.CurrentGameMode[0];
-            return _value % 2 == parity ? true : false;
+            return value % 2 == parity ? true : false;
         }
 
         void setValues()
         {
-            //valueText = this.gameObject.GetComponent < TextMeshPro>();
-            _value = Random.Range(1, 10);
-            valueText.text = _value.ToString();
+            value = Random.Range(1, 10);
+            valueText.text = value.ToString();
         }
 
-
-        public override void Destroy()
+        protected override void InitializeObjectSettings()
         {
-           // Destroy(GameObject);
-        
+            setValues();
         }
     }
 }

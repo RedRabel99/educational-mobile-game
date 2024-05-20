@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringLocalizationTable_pl
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pl
+  m_SharedData: {fileID: 11400000, guid: 10aa3223135cefd4ebc32261a4d2c825, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 5141679246024114211
+  m_TableData:
+  - m_Id: 16138223616
+    m_Localized: "PARZYSTO\u015A\u0106"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20075959140352
+    m_Localized: FIGURY GEOMETRYCZNE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27069277388800
+    m_Localized: "WI\u0118KSZE/MNIEJSZE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28663607836672
+    m_Localized: SKLEP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31591362052096
+    m_Localized: "ZA\u0141AP MATEMATYK\u0118"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36037093605376
+    m_Localized: NAJLEPSZE WYNIKI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37333452308480
+    m_Localized: "ODEJMUJE JEDEN B\u0141\u0104D W TRAKCIE GRY"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31836632367104
+    m_Localized: PODWAJA OTRZYMYWANE PUNKTY PRZEZ 10 SEKUND
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38647234150400
+    m_Localized: SPOWALNIA CZAS NA 5 SEKUND
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38817938128896
+    m_Localized: 'POSIADASZ:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45587528007680
+    m_Localized: INFORMACJE O GRZE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45663981780992
+    m_Localized: "GRA ZOSTA\u0141A STWORZONA W RAMACH PRACY LICENCJACKIEJ NA UNIWERSYTECIE
+      MARII CURIE SK\u0141ODOWSKIEJ W LUBLINIE\nAUTOR: PAWE\u0141 LYSKO\n\nGRAFIKI
+      UI: \"FREE GAME UI\" AUTORSTWA PZUH NA STRONIE OPENGAMEART.ORG\n\nD\u0179WI\u0118K
+      B\u0141\u0118DU: EZDUZZITEH NA STRONIE OPENGAMEART.ORG\n\nD\u0179WI\u0118K
+      POPRAWNEJ ODPOWIEDZI: WOBBLEBOXX.COM\n\nMUZYKA: FREQUENTLY ASKED MUSIC W UNITY
+      ASSET STORE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57948523577344
+    m_Localized: PARZYSTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59276855459840
+    m_Localized: NIEPARZYSTE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60657247043584
+    m_Localized: 'WYNIK
+
+      {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 5141679246024114211
+  - m_Id: 65406604263424
+    m_Localized: "WYNIK KO\u0143COWY\n{0}"
+    m_Metadata:
+      m_Items:
+      - rid: 5141679246024114211
+  - m_Id: 66677138636800
+    m_Localized: KONIEC GRY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 675017774567424
+    m_Localized: 'NAJLEPSZY WYNIK: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 676896101339136
+    m_Localized: NOWY NAJLEPSZY WYNIK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 679131027836928
+    m_Localized: '^
+
+      NOWY CEL'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684121188438016
+    m_Localized: KWADRATY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684274045652992
+    m_Localized: "TR\xD3JK\u0104TY"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684422821810176
+    m_Localized: "KO\u0141A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 688370035167232
+    m_Localized: "WI\u0118KSZE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 688466722263040
+    m_Localized: MNIEJSZE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 688532438618112
+    m_Localized: "NI\u017B"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5141679246024114211
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00c0a9dd2a37000000c069a97c3b0000

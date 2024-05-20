@@ -6,7 +6,6 @@ using System;
 
 public class Countdown : MonoBehaviour
 {
-    //public int timer;
     [SerializeField] TMP_Text counter;
     public IEnumerator CountdownToStart(int timer)
     {
@@ -25,6 +24,5 @@ public class Countdown : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         gameObject.SetActive(false);
-      //  Time.timeScale = 1f;
     }
 }

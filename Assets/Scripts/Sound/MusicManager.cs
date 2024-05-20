@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-   // public AudioSource[] musicPlayers;
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource soundSource;
     public int currentPlayer;
@@ -18,21 +17,6 @@ public class MusicManager : MonoBehaviour
         musicSource.Play();
         musicSource.volume = AudioSettings.MusicIsOn ? 0.5f : 0f;
         soundSource.volume = AudioSettings.SoundIsOn ? 1f : 0f;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void UpdateMusicPlayer(int newPlayer)
-    {
-        /*
-        musicPlayers[currentPlayer].Stop();
-        currentPlayer = newPlayer;
-        musicPlayers[currentPlayer].Play();
-        */
     }
 
     public void ToggleMusicState()
@@ -50,7 +34,6 @@ public class MusicManager : MonoBehaviour
     public void PlayErrorSound()
     {
         soundSource.PlayOneShot(AudioSettings.AudioClips[1]);
-        Debug.Log("AAAAAAAAAAAAAAAAAAASFGas");
     }
 
     public void PlayScoreSound()

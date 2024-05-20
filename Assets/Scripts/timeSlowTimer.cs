@@ -9,7 +9,6 @@ public class timeSlowTimer : BuffTimer
     {
         if (isRunning) return;
         if (!gameController.buffSystem.isBuffAvailable(Convert.ToInt32(ButtonNames.Time))) return;
-        Debug.Log("?????????????? " + !gameController.buffSystem.isBuffAvailable(Convert.ToInt32(ButtonNames.Time)));
         gameController.buffSystem.DecreaseBuffAmount(Convert.ToInt32(ButtonNames.Time));
         gameController.buffSystem.UpdateBuffAmountTexts();
         timeSlider.gameObject.SetActive(true);
@@ -20,7 +19,6 @@ public class timeSlowTimer : BuffTimer
 
     protected override void OnBuffStop()
     {
-        Debug.Log("ONBUFFSTOP");
         RemoveSlowFallingObjects();
         timeSlider.value = buffTime;
         timeSlider.gameObject.SetActive(false);

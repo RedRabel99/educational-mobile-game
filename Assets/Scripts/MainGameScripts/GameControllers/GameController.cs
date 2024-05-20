@@ -5,7 +5,7 @@ using FallingObject;
 
 public class GameController : MonoBehaviour
 {
-    public FallingObject.FallingObject ObjectToSpawn;
+    public FallingGameObject ObjectToSpawn;
     public FallingObjectSpawner fallingObjectSpawner;
     public PauseMenu pauseMenu;
     public Score score;

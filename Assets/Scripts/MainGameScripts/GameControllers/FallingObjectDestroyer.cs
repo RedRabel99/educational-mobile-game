@@ -8,17 +8,17 @@ public class FallingObjectDestroyer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        bool var = collision.gameObject.GetComponent<FallingObject.FallingObject>().IsCorrect(gameController.gameMode);
+        bool isCorrect = collision.gameObject.GetComponent<FallingGameObject>().IsCorrect(gameController.gameMode);
 
         Destroy(collision.gameObject);
-        if (var)
+        if (isCorrect)
         {
-            UpdateScore();
+            PerformMistakeAction();
         }
        
     }
 
-    private void UpdateScore()
+    private void PerformMistakeAction()
     {
         gameController.GetComponent<GameController>().mistakeCounter.IncreaseMistakeValue();
         gameController.musicManager.PlayErrorSound();

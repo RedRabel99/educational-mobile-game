@@ -38,7 +38,6 @@ public class PauseMenu : MonoBehaviour
     IEnumerator ResumeAfterCountdown()
     {
         yield return StartCoroutine(gameController.countdown.CountdownToStart(3));
-        Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAA");
         gameController.pauseController.UnpauseFallingObjects();
         isPaused = false;
     }

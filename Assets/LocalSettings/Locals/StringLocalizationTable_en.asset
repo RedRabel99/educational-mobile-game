@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringLocalizationTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 10aa3223135cefd4ebc32261a4d2c825, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 5141679246024114210
+  m_TableData:
+  - m_Id: 16138223616
+    m_Localized: PARITY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20075959140352
+    m_Localized: 'GEOMETRICAL
+
+      FIGURES'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27069277388800
+    m_Localized: GREATER/LESSER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28663607836672
+    m_Localized: SHOP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31591362052096
+    m_Localized: 'CATCH
+
+      MATH'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36037093605376
+    m_Localized: 'BEST
+
+      SCORES'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37333452308480
+    m_Localized: SUBTRACTS ONE ERROR DURING THE GAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31836632367104
+    m_Localized: DOUBLES THE POINTS RECEIVED FOR 10 SECONDS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38647234150400
+    m_Localized: SLOWS TIME FOR 5 SECONDS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38817938128896
+    m_Localized: 'YOU HAVE:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45587528007680
+    m_Localized: GAME INFO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45663981780992
+    m_Localized: "THE GAME WAS CREATED AS PART OF THE BACHELOR'S THESIS AT THE MARII
+      CURIE SKLODOWSKA UNIVERSITY IN LUBLIN\r\nAUTHOR: PAWE\u0141 LYSKO\r\n\r\nUI
+      GRAPHICS: \u201CFREE GAME UI\u201D BY PZUH ON OPENGAMEART.ORG\r\n\r\nBUG SOUND:
+      EZDUZZITEH AT OPENGAMEART.ORG\r\n\r\nSOUND OF CORRECT ANSWER: WOBBLEBOXX.COM\r\n\r\nMUSIC:
+      FREQUENTLY ASKED MUSIC IN UNITY ASSET STORE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57948523577344
+    m_Localized: EVEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59276855459840
+    m_Localized: ODD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60657247043584
+    m_Localized: 'SCORE
+
+      {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 5141679246024114210
+  - m_Id: 65406604263424
+    m_Localized: 'FINAL SCORE
+
+      {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 5141679246024114210
+  - m_Id: 66677138636800
+    m_Localized: GAME OVER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 675017774567424
+    m_Localized: 'BEST SCORE: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 676896101339136
+    m_Localized: NEW RECORD!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 679131027836928
+    m_Localized: '^
+
+      NEW GOAL'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684121188438016
+    m_Localized: SQUARES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684274045652992
+    m_Localized: TRIANGLES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684422821810176
+    m_Localized: CIRCLES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 688370035167232
+    m_Localized: GREATER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 688466722263040
+    m_Localized: LESSER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 688532438618112
+    m_Localized: THAN
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5141679246024114210
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00c0a9dd2a37000000c069a97c3b0000
